@@ -1,0 +1,25 @@
+Hero and toolkit artwork
+
+Tux, the Linux mascot
+Original artwork by Larry Ewing (lewing@isc.tamu.edu), created with The GIMP. Vector artwork by Simon Budig and Garrett LeSage. The accompanying Tux-README.txt is the original redistribution notice.
+https://commons.wikimedia.org/wiki/File:Tux.svg
+
+CrowdCanvas animation and art
+Skiper 39 by Skiper UI / Gurvinder Singh. https://skiper-ui.com/ · https://gxuri.me/
+Animation adapted from https://codepen.io/zadvorsky/pen/xxwbBQV
+Open Peeps by Pablo Stanley, CC0 1.0. https://www.openpeeps.com/ · https://creativecommons.org/publicdomain/zero/1.0/
+The supplied 15-column, 7-row sheet is resized and encoded as transparent WebP for the web.
+
+Open-source project marks
+Version 14 of Simple Icons supplies monochrome SVG paths, https://github.com/simple-icons/simple-icons (project code under CC0 1.0). Each original project retains its logo and trademark rights. Monochrome versions of artwork below are used to identify the projects.
+
+Arch Linux — Arch Linux project. https://www.archlinux.org/art
+Blender — Blender project. https://www.blender.org/about/logo
+Firefox — Firefox project. https://mozilla.design/firefox/logos-usage/
+GIMP — GIMP project. https://gitlab.gnome.org/GNOME/gimp-data/-/blob/e62f1905dcef7ec831ea6c052bb035eb37eaa69e/images/logo/gimp-logo-unicolor.svg — CC-BY-SA-4.0, https://creativecommons.org/licenses/by-sa/4.0/
+Git — Jason Long. https://git-scm.com/downloads/logos — CC-BY-3.0, https://creativecommons.org/licenses/by/3.0/
+Inkscape — Inkscape project. https://inkscape.org/gallery/=inkscape-branding/inkscape-brand-assets/ — CC-BY-SA-3.0, https://creativecommons.org/licenses/by-sa/3.0/
+Neovim — Neovim project. https://neovim.io — CC-BY-SA-3.0, https://creativecommons.org/licenses/by-sa/3.0/
+openSUSE — openSUSE project. https://github.com/openSUSE/artwork/blob/33e94aa76837c09f03d1712705949b71a246a53b/logos/buttons/button-colour.svg
+Vim — Vim project. https://commons.wikimedia.org/wiki/File:Vimlogo.svg
+VLC media player — VLC media player project. https://code.videolan.org/videolan/vlc/-/blob/1ce7f686ee17a028d2d79627ae69f22d905f2e23/extras/package/macosx/asset_sources/vlc_app_icon.svg
