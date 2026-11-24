@@ -1,9 +1,0 @@
-{
-  "name": "the-source-lab-hkbk",
-  "private": true,
-  "type": "module",
-  "scripts": {
-    "start": "node serve.mjs",
-    "build": "node scripts/build-worker.mjs"
-  }
-}
