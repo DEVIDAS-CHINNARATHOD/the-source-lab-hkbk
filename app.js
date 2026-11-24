@@ -48,52 +48,35 @@ if (filters) {
 const contact = document.querySelector('#contact-form');
 if (contact) {
   const status = contact.querySelector('.form-status');
-  if (location.protocol === 'file:') {
-    document.querySelector('#hosted-contact').hidden = false;
-    status.textContent = 'Open the hosted form to send an enquiry from this offline copy.';
-  }
-  const submit = contact.querySelector('button[type="submit"]');
-  let requestId;
+  const manualCopy = contact.querySelector('#manual-copy');
+  const preview = manualCopy.querySelector('textarea');
+  contact.hidden = false;
   contact.addEventListener('input', () => {
-    requestId = undefined;
     status.textContent = '';
+    manualCopy.hidden = true;
+    preview.value = '';
   });
   contact.addEventListener('submit', async event => {
     event.preventDefault();
-    if (submit.disabled || !contact.reportValidity()) return;
-    if (typeof crypto.randomUUID === 'function') requestId ??= crypto.randomUUID();
-    const payload = Object.fromEntries(new FormData(contact));
-    payload.id = requestId;
-    submit.disabled = true;
-    contact.setAttribute('aria-busy', 'true');
-    status.dataset.error = 'false';
-    status.textContent = 'Sending your message…';
+    const fields = new FormData(contact);
+    const name = fields.get('name').trim();
+    const message = fields.get('message').trim();
+    if (!message) {
+      status.textContent = 'Write a message before copying.';
+      contact.elements.message.focus();
+      return;
+    }
+    const draft = [fields.get('topic'), message, name].filter(Boolean).join('\n\n');
     try {
-      const response = await fetch(contact.action, {
-        method:'POST',
-        headers:{'Content-Type':'application/json', Accept:'application/json'},
-        body:JSON.stringify(payload)
-      });
-      const result = await response.json();
-      if (!response.ok || !result.received) {
-        if ([422,429].includes(response.status) && result.message) {
-          status.dataset.error = 'true';
-          status.textContent = result.message;
-          return;
-        }
-        throw new Error();
-      }
-      if (requestId === payload.id) contact.reset();
-      document.querySelector('#hosted-contact').hidden = true;
-      requestId = undefined;
-      status.textContent = 'Thank you. The Source Lab has received your message.';
+      await navigator.clipboard.writeText(draft);
+      manualCopy.hidden = true;
+      status.textContent = 'Draft copied. Open Instagram to paste and send it.';
     } catch {
-      status.dataset.error = 'true';
-      status.textContent = 'Your message could not be confirmed. Try again or use the hosted contact form.';
-      document.querySelector('#hosted-contact').hidden = false;
-    } finally {
-      contact.removeAttribute('aria-busy');
-      submit.disabled = false;
+      manualCopy.hidden = false;
+      preview.value = draft;
+      preview.focus();
+      preview.select();
+      status.textContent = 'Your draft is selected below. Copy it, then paste it into Instagram.';
     }
   });
 }

@@ -58,19 +58,15 @@
 .contact-alt a {color:#294c2a;text-decoration:underline;text-underline-offset:.2em}
 #contact-form {position:relative;display:grid;gap:1.1rem;background:white;border:1px solid #ccd6c6;border-radius:.65rem;padding:clamp(1.1rem,3vw,2.25rem)}
 #contact-form label {display:grid;gap:.35rem;color:#213129;font-weight:650}
-.field-pair {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
 #contact-form :is(input,textarea,select) {display:block;width:100%;min-width:0;min-height:46px;border:1px solid #879787;border-radius:.35rem;background-color:#fff;color:#142720;font:400 1rem/1.4 var(--sans);padding:.66rem .75rem}
 #contact-form select {appearance:none;padding-right:2.5rem;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' stroke='%232a392f' stroke-width='2'%3E%3Cpath d='m3 6 5 5 5-5'/%3E%3C/svg%3E");background-position:right .85rem center;background-repeat:no-repeat}
 #contact-form textarea {resize:vertical}
 #contact-form :focus-visible {outline:3px solid #60883a;outline-offset:2px}
-.form-trap {position:absolute;left:0;width:1px;height:1px;clip-path:inset(50%);overflow:hidden}
 .form-note {color:#4d6053;font-size:.94rem}
 .send-button {justify-self:start;border:0;background:#19392b;color:white;min-height:46px;padding-inline:1.5rem}
 .send-button:hover {background:#2c513e}
-.send-button:disabled {opacity:.7}
 .form-status {color:#255328;font-weight:650}
 .form-status:empty {display:none}
-.form-status[data-error=true] {color:#932f21}
 .footer-grid {display:grid;grid-template-columns:minmax(0,1.4fr) repeat(3,minmax(0,1fr));gap:clamp(1.5rem,4vw,4rem);padding-block:clamp(2.4rem,5vw,4.6rem) 2.4rem}
 .footer-brand img {width:12rem;height:auto;background:#f7faf3;border-radius:.35rem;padding:.45rem .7rem}
 .footer-brand p {max-width:26ch;margin:1rem 0 .65rem;color:#d7e3db}
@@ -100,7 +96,6 @@
   .footer-grid nav a {min-height:44px}
 }
 @media(max-width:32rem) {
-  .field-pair {grid-template-columns:1fr;gap:1.1rem}
   .footer-grid {gap:1.65rem 1rem}
   .footer-brand {grid-column:1/-1}
   .footer-brand p {max-width:34ch}
@@ -149,3 +144,7 @@ html[data-hero-motion="running"] .marquee-track{animation-play-state:running}
 @media(max-width:590px){.landing-grid{grid-template-columns:1fr;gap:.75rem;padding-block:1.75rem .5rem}.landing h1{font-size:clamp(3.55rem,12.5vw,4.7rem);margin:.6rem 0 .75rem}.landing-copy>p{font-size:1rem}.landing .hero-actions{margin-top:1.1rem}.tux-stage{height:clamp(9rem,42vw,13rem);width:76%;justify-self:center}.tux-stage figcaption{right:-.65rem;bottom:.1rem;font-size:.64rem}.crowd-stage{height:3rem}.landing-grid .button{min-height:2.65rem}.logo-run i{margin:0 .6rem}}
 
 .motion-button[hidden]{display:none}.motion-button span{font:700 1.05rem/1 var(--sans)}.contact-backup{text-decoration:underline}
+
+#contact-form[hidden], #contact-form [hidden] {display:none}
+.contact-actions {display:flex;flex-wrap:wrap;align-items:center;gap:.75rem 1.25rem}
+.field-hint {font-weight:400;color:var(--muted)}

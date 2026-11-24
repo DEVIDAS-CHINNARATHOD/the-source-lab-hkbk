@@ -17,16 +17,15 @@
 </section>
 <section class="section contact-section" id="contact" aria-labelledby="contact-title">
   <div class="wrap contact-grid">
-    <div class="contact-intro"><div class="overline"><span></span>Contact</div><h2 id="contact-title">Get in touch</h2><p>Want to join The Source Lab, ask about a workshop or propose a session at HKBK? Send a message to the cell.</p><p class="contact-alt">You can also reach us on <a href="https://www.instagram.com/the_source_labs/">Instagram</a>.</p></div>
-    <form id="contact-form" method="post" action="api/contact">
-      <div class="field-pair"><label>Your name<input name="name" autocomplete="name" required maxlength="90"></label>
-      <label>Your email<input type="email" name="email" autocomplete="email" required maxlength="254"></label></div>
+    <div class="contact-intro"><div class="overline"><span></span>Contact</div><h2 id="contact-title">Get in touch</h2><p>Want to join The Source Lab, ask about a workshop or propose a session at HKBK? Contact the student team on Instagram.</p><p class="contact-alt"><a href="https://www.instagram.com/the_source_labs/">@the_source_labs</a></p></div>
+    <form id="contact-form" hidden>
+      <label>Your name <span class="field-hint">(optional)</span><input name="name" autocomplete="name" maxlength="90"></label>
       <label>Topic<select name="topic" required><option value="" selected disabled>Select a topic</option><option>Joining the cell</option><option>Workshops and events</option><option>Collaboration</option><option>General enquiry</option></select></label>
-      <label>Message<textarea name="message" rows="5" minlength="5" maxlength="3000" required></textarea></label>
-      <div class="form-trap" aria-hidden="true" inert><label>Leave empty<input name="website" autocomplete="off" tabindex="-1"></label></div>
-      <p class="form-note">Your message and reply address go to the cell’s private inbox.</p>
-      <button class="button send-button" type="submit">Send message</button>
-      <p class="form-status" role="status" aria-live="polite" aria-atomic="true"></p><p id="hosted-contact" hidden><a class="contact-backup" href="https://the-source-lab-hkbk-community.curlyeagle2.chatgpt.site/#contact">Open the hosted contact form</a></p>
+      <label>Message<textarea name="message" rows="5" maxlength="3000" required></textarea></label>
+      <p class="form-note">Copy your draft, then paste it into a direct message to the cell on Instagram.</p>
+      <div class="contact-actions"><button class="button send-button" type="submit">Copy message</button><a class="contact-backup" href="https://www.instagram.com/the_source_labs/">Open Instagram</a></div>
+      <p class="form-status" role="status" aria-live="polite" aria-atomic="true"></p>
+      <label id="manual-copy" hidden>Copy this draft<textarea readonly rows="5"></textarea></label>
     </form>
   </div>
 </section></main><footer class="site-footer"><div class="wrap">

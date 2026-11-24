@@ -1,5 +1,7 @@
-# The Source Lab · HKBK
+# The Source Lab
 
-Open `index.html` in a browser. The site uses HTML, CSS and vanilla JavaScript. Images, logos, fonts and artwork are in `assets/`. The four event pages are in `events/`. No dependencies or build step are required.
+Open `index.html` in a browser. Edit `style.css` for the layout and `app.js` for the navigation, event filters, animation controls and contact composer. Event pages are in `events/`. Photos, posters, logos, fonts and artwork credits are in `assets/`.
 
-To try the contact inbox locally with Node.js 22.13 or later, run `node serve.mjs` and open http://127.0.0.1:4173. Enquiries go to an ignored SQLite file alongside the server and are never exposed through a website route. Static-only hosts can serve the entire frontend unchanged. Sending enquiries on those hosts requires a same-origin POST handler at `api/contact`, or use the link to the hosted form. The existing hosted site has its own private inbox.
+To host the website, copy the HTML, CSS, JavaScript, `events/` and `assets/` to any static web host. Relative links also work under a project subdirectory.
+
+The contact composer lets visitors copy their draft and send it themselves to **@the_source_labs** on Instagram. The website does not store enquiries.
