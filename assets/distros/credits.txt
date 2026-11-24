@@ -1,0 +1,7 @@
+Distribution marks
+The four vector paths were obtained from Simple Icons, via its SVG listings at https://www.shadcn.io/icon/simple-icons-fedora, https://www.shadcn.io/icon/simple-icons-debian, https://www.shadcn.io/icon/simple-icons-ubuntu and https://www.shadcn.io/icon/simple-icons-linuxmint. Brand colours were applied locally.
+Simple Icons is published under CC0 1.0 (https://github.com/simple-icons/simple-icons/blob/develop/LICENSE.md). Original trademarks and logo copyrights continue to belong to their owners.
+Debian Open Use Logo © 1999 Software in the Public Interest, Inc. Adapted to a 24-unit viewBox via Simple Icons and displayed in red. Distributed under CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0/). Original source and terms: https://www.debian.org/logos/.
+Fedora is a trademark of Red Hat, Inc. https://fedoraproject.org/wiki/Logo
+Ubuntu is a registered trademark of Canonical Ltd. https://design.ubuntu.com/brand
+Linux Mint original branding: https://github.com/linuxmint/brand-logo
